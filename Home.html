@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop.co</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Banner -->
+    <div class="bg-black text-white text-center text-sm py-2">
+      Sign up and get 20% off to your first order.
+      <a href="#" class="underline ml-1">Sign Up Now</a>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-6 py-4 border-b relative"
+    >
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img
+          src="./assets/Anil Vastralaya.png"
+          alt="Shop.co Logo"
+          class="h-16 w-auto object-contain"
+        />
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <div class="relative group text-2xl">
+          <button class="hover:text-black">Shop ▾</button>
+        </div>
+        <a href="#" class="hover:text-black text-2xl">On Sale</a>
+        <a href="#" class="hover:text-black text-2xl">New Arrivals</a>
+        <a href="#" class="hover:text-black text-2xl">Brands</a>
+      </nav>
+
+      <!-- Right Side: Search / Cart / User / Hamburger -->
+      <div class="flex items-center gap-4">
+        <!-- Desktop Search -->
+        <input
+          type="text"
+          placeholder="Search for products..."
+          class="hidden md:block px-3 py-1 rounded-full border text-sm w-72"
+        />
+
+        <!-- Mobile Search Icon -->
+        <button class="md:hidden text-gray-700 hover:text-black">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"
+            />
+          </svg>
+        </button>
+
+        <!-- Cart Icon -->
+        <button class="text-gray-700 hover:text-black">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-2 9h14l-2-9M9 21h0M15 21h0"
+            />
+          </svg>
+        </button>
+
+        <!-- User Icon -->
+        <button class="text-gray-700 hover:text-black">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5.121 17.804A7 7 0 0112 15a7 7 0 016.879 2.804M12 7a4 4 0 110 8 4 4 0 010-8z"
+            />
+          </svg>
+        </button>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-700 hover:text-black focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden px-6 py-4 hidden bg-white border-t">
+      <nav class="flex flex-col gap-4 text-lg">
+        <a href="#" class="hover:text-black">Shop</a>
+        <a href="#" class="hover:text-black">On Sale</a>
+        <a href="#" class="hover:text-black">New Arrivals</a>
+        <a href="#" class="hover:text-black">Brands</a>
+      </nav>
+    </div>
+
+    <!-- Script for Hamburger -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-10 bg-gray-100"
+    >
+      <!-- Left: Text Content -->
+      <div
+        class="w-full md:w-1/2 flex flex-col space-y-6 order-1 md:order-none"
+      >
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          FIND CLOTHES<br />
+          THAT MATCHES<br />
+          YOUR STYLE
+        </h1>
+        <p class="text-black">
+          Browse through our diverse range of meticulously crafted garments,
+          designed to bring out your individuality and cater to your sense of
+          style.
+        </p>
+
+        <!-- Shop Button -->
+        <button
+          class="bg-black text-white px-6 py-2 text-lg md:px-3 md:py-1 md:text-sm rounded-full font-medium hover:bg-gray-800 transition-all"
+        >
+          Shop Now
+        </button>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 pt-6 text-center">
+          <div>
+            <p class="text-xl font-bold">200+</p>
+            <p class="text-sm text-black">International Brands</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold">2,000+</p>
+            <p class="text-sm text-black">High-Quality Products</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold">30,000+</p>
+            <p class="text-sm text-black">Happy Customers</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Hero Image -->
+      <div
+        class="w-full md:w-1/2 flex justify-center relative mt-10 md:mt-0 order-2 md:order-none"
+      >
+        <img
+          src="./assets/baner-1.jpg"
+          alt="Models"
+          class="w-full max-w-sm md:max-w-md"
+        />
+        <!-- Decorative elements -->
+        <div
+          class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-black rotate-45"
+        ></div>
+        <div
+          class="absolute top-0 right-0 w-8 h-8 bg-black rotate-45 translate-x-1/2 -translate-y-1/2"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="bg-black py-6">
+      <div
+        class="flex flex-wrap justify-center items-center gap-12 text-white text-xl font-light"
+      >
+        <span class="tracking-wide">VERSACE</span>
+        <span class="tracking-wide">ZARA</span>
+        <span class="tracking-wide">GUCCI</span>
+        <span class="tracking-wide font-bold">PRADA</span>
+        <span class="tracking-wide">Calvin Klein</span>
+      </div>
+    </section>
+    <section class="w-full px-6 md:px-12 mt-12">
+      <h2
+        class="text-center text-2xl md:text-3xl font-extrabold mb-6 uppercase"
+      >
+        TOP SELLING
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Product Card 1 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 7.png" />
+          <h3 class="text-sm md:text-base font-semibold">
+            Printed Oversized T-shirt
+          </h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.7/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$160</span>
+            <span class="text-sm line-through text-gray-400">$190</span>
+            <span class="text-xs text-red-500">-15%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 8.png" />
+          <h3 class="text-sm md:text-base font-semibold">
+            Men's Sports Jacket
+          </h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.3/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$120</span>
+            <span class="text-sm line-through text-gray-400">$140</span>
+            <span class="text-xs text-red-500">-14%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 9.png" />
+          <h3 class="text-sm md:text-base font-semibold">Casual Sneakers</h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.9/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$95</span>
+            <span class="text-sm line-through text-gray-400">$110</span>
+            <span class="text-xs text-red-500">-13%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/Frame 38.png" />
+
+          <h3 class="text-sm md:text-base font-semibold">Designer Watch</h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.8/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$210</span>
+            <span class="text-sm line-through text-gray-400">$250</span>
+            <span class="text-xs text-red-500">-16%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-6">
+        <button
+          class="px-6 py-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition"
+        >
+          View All
+        </button>
+      </div>
+    </section>
+    <section class="w-full px-6 md:px-12 mt-12">
+      <h2
+        class="text-center text-2xl md:text-3xl font-extrabold mb-6 uppercase"
+      >
+        TOP SELLING
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Product Card 1 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 7.png" />
+
+          <h3 class="text-sm md:text-base font-semibold">
+            Printed Oversized T-shirt
+          </h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.7/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$160</span>
+            <span class="text-sm line-through text-gray-400">$190</span>
+            <span class="text-xs text-red-500">-15%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 8.png" />
+
+          <h3 class="text-sm md:text-base font-semibold">
+            Men's Sports Jacket
+          </h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.3/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$120</span>
+            <span class="text-sm line-through text-gray-400">$140</span>
+            <span class="text-xs text-red-500">-14%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/image 9.png" />
+
+          <h3 class="text-sm md:text-base font-semibold">Casual Sneakers</h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.9/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$95</span>
+            <span class="text-sm line-through text-gray-400">$110</span>
+            <span class="text-xs text-red-500">-13%</span>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div
+          class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition duration-300"
+        >
+          <img src="./assets/Frame 38.png" />
+
+          <h3 class="text-sm md:text-base font-semibold">Designer Watch</h3>
+          <div class="text-yellow-400 text-sm">⭐ 4.8/5</div>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-lg font-bold text-black">$210</span>
+            <span class="text-sm line-through text-gray-400">$250</span>
+            <span class="text-xs text-red-500">-16%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-6 mb-6">
+        <button
+          class="px-6 py-2 border border-gray-400 rounded-full hover:bg-black hover:text-white transition"
+        >
+          View All
+        </button>
+      </div>
+    </section>
+    <section class="max-w-4xl mx-auto px-4 py-10 bg-gray-200 rounded-3xl">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-8">
+        BROWSE BY DRESS STYLE
+      </h2>
+      <div class="bg-white p-6 shadow-xl border border-gray-200">
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Casual -->
+          <div class="relative rounded-xl overflow-hidden">
+            <img
+              src="./assets/image 11.png"
+              alt="Casual"
+              class="w-full h-full object-cover"
+            />
+            <p class="absolute top-3 left-4 text-lg font-semibold text-black">
+              Casual
+            </p>
+          </div>
+
+          <!-- Formal -->
+          <div class="relative rounded-xl overflow-hidden">
+            <img
+              src="./assets/image 12.png"
+              alt="Formal"
+              class="w-full h-full object-cover"
+            />
+            <p class="absolute top-3 left-4 text-lg font-semibold text-black">
+              Formal
+            </p>
+          </div>
+
+          <!-- Party -->
+          <div class="relative rounded-xl overflow-hidden">
+            <img
+              src="./assets/image 13.png"
+              alt="Party"
+              class="w-full h-full object-cover"
+            />
+            <p class="absolute top-3 left-4 text-lg font-semibold text-black">
+              Party
+            </p>
+          </div>
+
+          <!-- Gym -->
+          <div class="relative rounded-xl overflow-hidden">
+            <img
+              src="./assets/image 14.png"
+              alt="Gym"
+              class="w-full h-full object-cover"
+            />
+            <p class="absolute top-3 left-4 text-lg font-semibold text-black">
+              Gym
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white text-black px-6 md:px-12 py-12">
+      <!-- Testimonials -->
+      <h2
+        class="text-2xl md:text-3xl font-extrabold text-center mb-10 uppercase"
+      >
+        Our Happy Customers
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="border border-gray-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <h3 class="font-bold">
+            Sarah M. <span class="text-gray-400">⭐</span>
+          </h3>
+          <p class="mt-2 text-sm text-gray-600">
+            “I’m blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I’ve
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="border border-gray-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <h3 class="font-bold">
+            Alex K. <span class="text-green-600">●</span>
+          </h3>
+          <p class="mt-2 text-sm text-gray-600">
+            “Finding clothes that align with my personal style used to be a
+            challenge until I discovered Shop.co. The range of options they
+            offer is truly remarkable, catering to a variety of tastes and
+            occasions.”
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="border border-gray-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center mb-4">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+          </div>
+          <h3 class="font-bold">
+            James L. <span class="text-green-600">●</span>
+          </h3>
+          <p class="mt-2 text-sm text-gray-600">
+            “As someone who’s always on the lookout for unique fashion pieces,
+            I’m thrilled to have stumbled upon Shop.co. The selection of clothes
+            is not only diverse but also on-point with the latest trends.”
+          </p>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div
+        class="bg-black text-white mt-16 rounded-2xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <h3 class="text-lg md:text-2xl font-bold text-center md:text-left">
+          STAY UPTO DATE ABOUT <br />
+          OUR LATEST OFFERS
+        </h3>
+
+        <div class="w-full md:w-1/2 flex flex-col gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            class="rounded-full px-4 py-2 text-black w-full focus:outline-none"
+          />
+
+          <button
+            class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition w-full"
+          >
+            Subscribe to Newsletter
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-16 text-gray-700">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+          <!-- Brand -->
+          <div class="col-span-2 md:col-span-1">
+            <h4 class="font-bold text-black mb-2">SHOP.CO</h4>
+            <p class="mb-4">
+              We have clothes that suit your style and which you’re proud to
+              wear. From women to men.
+            </p>
+            <div class="flex gap-3">
+              <img
+                src="https://img.icons8.com/ios-filled/20/000000/facebook-new.png"
+                alt="Facebook"
+              />
+              <img
+                src="https://img.icons8.com/ios-filled/20/000000/twitter.png"
+                alt="Twitter"
+              />
+              <img
+                src="https://img.icons8.com/ios-filled/20/000000/instagram-new.png"
+                alt="Instagram"
+              />
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h5 class="font-semibold text-black mb-2">Company</h5>
+            <ul class="space-y-1">
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+
+          <!-- Help -->
+          <div>
+            <h5 class="font-semibold text-black mb-2">Help</h5>
+            <ul class="space-y-1">
+              <li>Customer Support</li>
+              <li>Delivery Details</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+
+          <!-- FAQ -->
+          <div>
+            <h5 class="font-semibold text-black mb-2">FAQ</h5>
+            <ul class="space-y-1">
+              <li>Account</li>
+              <li>Manage Deliveries</li>
+              <li>Orders</li>
+              <li>Payments</li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <h5 class="font-semibold text-black mb-2">Resources</h5>
+            <ul class="space-y-1">
+              <li>Free eBooks</li>
+              <li>Development Tutorial</li>
+              <li>How to - Blog</li>
+              <li>Youtube Playlist</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mt-10 border-t pt-4 text-sm"
+        >
+          <p>Shop.co © 2000-2023. All Rights Reserved</p>
+          <div class="flex gap-3 mt-4 md:mt-0">
+            <img src="https://img.icons8.com/color/36/visa.png" alt="Visa" />
+            <img
+              src="https://img.icons8.com/color/36/mastercard-logo.png"
+              alt="MasterCard"
+            />
+            <img
+              src="https://img.icons8.com/color/36/paypal.png"
+              alt="Paypal"
+            />
+            <img
+              src="https://img.icons8.com/color/36/apple-pay.png"
+              alt="Apple Pay"
+            />
+            <img
+              src="https://img.icons8.com/color/36/google-pay.png"
+              alt="Google Pay"
+            />
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
